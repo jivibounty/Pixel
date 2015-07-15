@@ -1,7 +1,6 @@
 
 #include <Pixel\Binarization.h>
 #include <Pixel\Image.h>
-#include <string.h>
 
 namespace Pixel
 {

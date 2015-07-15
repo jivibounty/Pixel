@@ -54,6 +54,18 @@
     <ClInclude Include="Difference.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Cut.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Paste.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Invert.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MedianFiltering.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Image.cpp">
@@ -81,6 +93,18 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Difference.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Cut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Paste.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Invert.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MedianFiltering.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
