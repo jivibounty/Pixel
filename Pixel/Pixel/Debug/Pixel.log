@@ -1,0 +1,10 @@
+﻿Build started 7/14/2015 1:25:53 PM.
+     1>Project "c:\Users\ifeanyinmoye\documents\visual studio 2010\Projects\Pixel\Pixel\Pixel.vcxproj" on node 2 (ClCompile target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"c:\users\ifeanyinmoye\documents\visual studio 2010\Projects\Pixel\\" /I"c:\users\ifeanyinmoye\documents\visual studio 2010\Projects\Pixel\\Libraries\include" /ZI /nologo /W3 /WX- /Od /Oy- /D PIXEL_SOURCE /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D PIXEL_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Image.cpp
+         Image.cpp
+     1>Done Building Project "c:\Users\ifeanyinmoye\documents\visual studio 2010\Projects\Pixel\Pixel\Pixel.vcxproj" (ClCompile target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.88
