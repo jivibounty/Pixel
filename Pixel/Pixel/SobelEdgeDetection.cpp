@@ -67,7 +67,7 @@ namespace Pixel
 						{
 							xx = 0;
 						}
-						else if(xx >= width)
+						else if(xx >= (int)width)
 						{
 							xx = width - 1;
 						}
@@ -76,7 +76,7 @@ namespace Pixel
 						{
 							yy = 0;
 						}
-						else if(yy >= height)
+						else if(yy >= (int)height)
 						{
 							yy = height - 1;
 						}
