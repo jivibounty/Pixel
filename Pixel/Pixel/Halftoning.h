@@ -3,14 +3,14 @@
 #define Halftoning_h
 
 #include <Pixel\CompileSettings.h>
-#include <Pixel\ImageOperation.h>
+#include <Pixel\IImageOperation.h>
 
 namespace Pixel
 {
 
 	class  Image;
 
-	class PIXEL_API Halftoning : public ImageOperation
+	class PIXEL_API Halftoning : public IImageOperation
 	{
 	public:
 		//constructor

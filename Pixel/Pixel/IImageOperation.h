@@ -10,15 +10,15 @@ namespace Pixel
 
 	class Image;
 
-	class PIXEL_API ImageOperation : public ReferenceCounter
+	class PIXEL_API IImageOperation : public ReferenceCounter
 	{
 	public:
 		//constructor
-		ImageOperation() {}
+		IImageOperation() {}
 		virtual Image* process(Image* pInImage) = 0;
 	protected:
 		//destructor
-		virtual ~ImageOperation() {}
+		virtual ~IImageOperation() {}
 	};
 
 }

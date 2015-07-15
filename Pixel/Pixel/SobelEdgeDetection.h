@@ -3,14 +3,14 @@
 #define SobelEdgeDetection_h
 
 #include <Pixel\CompileSettings.h>
-#include <Pixel\ImageOperation.h>
+#include <Pixel\IImageOperation.h>
 
 namespace Pixel
 {
 
 	class  Image;
 
-	class PIXEL_API SobelEdgeDetection : public ImageOperation
+	class PIXEL_API SobelEdgeDetection : public IImageOperation
 	{
 	public:
 		//constructor

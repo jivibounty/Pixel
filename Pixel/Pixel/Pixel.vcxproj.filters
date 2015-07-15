@@ -27,9 +27,6 @@
     <ClInclude Include="CompileSettings.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ImageOperation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Halftoning.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -43,6 +40,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GrayScale.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IImageOperation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Addition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Subtraction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Difference.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -63,6 +72,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GrayScale.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Subtraction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Addition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Difference.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

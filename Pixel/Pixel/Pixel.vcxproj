@@ -80,24 +80,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Addition.h" />
     <ClInclude Include="Binarization.h" />
     <ClInclude Include="CompileSettings.h" />
+    <ClInclude Include="Difference.h" />
     <ClInclude Include="GrayScale.h" />
     <ClInclude Include="Halftoning.h" />
     <ClInclude Include="HistogramEqualization.h" />
     <ClInclude Include="Image.h" />
-    <ClInclude Include="ImageOperation.h" />
+    <ClInclude Include="IImageOperation.h" />
     <ClInclude Include="ReferenceCounter.h" />
     <ClInclude Include="SobelEdgeDetection.h" />
+    <ClInclude Include="Subtraction.h" />
     <ClInclude Include="Utils.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Addition.cpp" />
     <ClCompile Include="Binarization.cpp" />
+    <ClCompile Include="Difference.cpp" />
     <ClCompile Include="GrayScale.cpp" />
     <ClCompile Include="Halftoning.cpp" />
     <ClCompile Include="HistogramEqualization.cpp" />
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="SobelEdgeDetection.cpp" />
+    <ClCompile Include="Subtraction.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
