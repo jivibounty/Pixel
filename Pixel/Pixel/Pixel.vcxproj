@@ -81,10 +81,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Addition.h" />
+    <ClInclude Include="AverageFiltering.h" />
     <ClInclude Include="Binarization.h" />
     <ClInclude Include="CompileSettings.h" />
     <ClInclude Include="Cut.h" />
     <ClInclude Include="Difference.h" />
+    <ClInclude Include="Dilation.h" />
+    <ClInclude Include="Erosion.h" />
+    <ClInclude Include="GaussianFiltering.h" />
     <ClInclude Include="GrayScale.h" />
     <ClInclude Include="Halftoning.h" />
     <ClInclude Include="HistogramEqualization.h" />
@@ -93,16 +97,25 @@
     <ClInclude Include="Invert.h" />
     <ClInclude Include="MedianFiltering.h" />
     <ClInclude Include="Paste.h" />
+    <ClInclude Include="Pruning.h" />
     <ClInclude Include="ReferenceCounter.h" />
+    <ClInclude Include="Rotation.h" />
+    <ClInclude Include="SaltAndPepperNoise.h" />
+    <ClInclude Include="Segmentation.h" />
     <ClInclude Include="SobelEdgeDetection.h" />
     <ClInclude Include="Subtraction.h" />
+    <ClInclude Include="Thinning.h" />
     <ClInclude Include="Utils.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Addition.cpp" />
+    <ClCompile Include="AverageFiltering.cpp" />
     <ClCompile Include="Binarization.cpp" />
     <ClCompile Include="Cut.cpp" />
     <ClCompile Include="Difference.cpp" />
+    <ClCompile Include="Dilation.cpp" />
+    <ClCompile Include="Erosion.cpp" />
+    <ClCompile Include="GaussianFiltering.cpp" />
     <ClCompile Include="GrayScale.cpp" />
     <ClCompile Include="Halftoning.cpp" />
     <ClCompile Include="HistogramEqualization.cpp" />
@@ -110,8 +123,13 @@
     <ClCompile Include="Invert.cpp" />
     <ClCompile Include="MedianFiltering.cpp" />
     <ClCompile Include="Paste.cpp" />
+    <ClCompile Include="Pruning.cpp" />
+    <ClCompile Include="Rotation.cpp" />
+    <ClCompile Include="SaltAndPepperNoise.cpp" />
+    <ClCompile Include="Segmentation.cpp" />
     <ClCompile Include="SobelEdgeDetection.cpp" />
     <ClCompile Include="Subtraction.cpp" />
+    <ClCompile Include="Thinning.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
