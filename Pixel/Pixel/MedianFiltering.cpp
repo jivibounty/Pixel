@@ -78,7 +78,7 @@ namespace Pixel
 
 		unsigned int bytesPerPixel = min(4, pInImage->getBytesPerPixel());
 		int halfFilterWindowSize = m_FilterWindowSize >> 1;
-		unsigned char* pFilterHelperData[4];
+		unsigned char* pFilterHelperData[4] = { NULL, NULL, NULL, NULL };
 		for(unsigned int n = 0; n < bytesPerPixel; ++n)
 		{
 			pFilterHelperData[n] = new unsigned char[m_FilterWindowSize * m_FilterWindowSize];
@@ -116,6 +116,10 @@ namespace Pixel
 				}
 
 			}
+		}
+		for(unsigned int n = 0; n < bytesPerPixel; ++n)
+		{
+			SAFE_DELETE(pFilterHelperData[n]);
 		}
 		return pOutImage;
 	}
