@@ -83,7 +83,11 @@ namespace Pixel
 				unsigned int offsetXY = (x + y * width) * pOutImage->getBytesPerPixel();
 				for(unsigned int i = 0; i < bytesPerPixel; ++i)
 				{
-					float avgValue = (float)sumPixels[i] / (float)numPixels;
+					float avgValue = 0.0f;
+					if(numPixels > 0)
+					{
+						avgValue = (float)sumPixels[i] / (float)numPixels;
+					}
 					if(avgValue > 255.0f)
 					{
 						avgValue = 255.0f;

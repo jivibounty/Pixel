@@ -95,6 +95,7 @@
     <ClInclude Include="Image.h" />
     <ClInclude Include="IImageOperation.h" />
     <ClInclude Include="Invert.h" />
+    <ClInclude Include="LocalThresholding.h" />
     <ClInclude Include="MedianFiltering.h" />
     <ClInclude Include="Paste.h" />
     <ClInclude Include="Pruning.h" />
@@ -121,6 +122,7 @@
     <ClCompile Include="HistogramEqualization.cpp" />
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="Invert.cpp" />
+    <ClCompile Include="LocalThresholding.cpp" />
     <ClCompile Include="MedianFiltering.cpp" />
     <ClCompile Include="Paste.cpp" />
     <ClCompile Include="Pruning.cpp" />
