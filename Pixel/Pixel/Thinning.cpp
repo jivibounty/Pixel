@@ -37,36 +37,43 @@ namespace Pixel
 
 		unsigned char P[9];
 		int no_deleted=100; //initialize to any value greater than zero
-		int *deleter=0;
+		int *pDeleter=0;
 		unsigned int size = width * height;
-		deleter=new int[size];
+		pDeleter=new int[size];
 		unsigned int bytesPerPixel = pOutImage->getBytesPerPixel();
 
 		for(unsigned int x = 1; x < width - 1; ++x)
 		{
 			for(unsigned int y = 1; y < height - 1; ++y)
 			{
-				pOutData[(x + y * width) * bytesPerPixel] = pInData[(x + y * width) * bytesPerPixel];
+				pOutData[(x + y * width) * bytesPerPixel] = pInData[(x + y * width) * bytesPerPixel] / 255;
 			}
 		}
 
 		while(no_deleted>0)
 		{
 			no_deleted=0;
-			memset(deleter, 0, sizeof(int) * size);
+			memset(pDeleter, 0, sizeof(int) * size);
 
 			//first sub iteration
-			for(unsigned int x=1;x<width-1;++x){
-				for(unsigned int y=1;y<height-1;++y){
-					unsigned int offsetb=(y*width+x);
-					unsigned int offset=offsetb*bytesPerPixel;
-					if(pInData[offset]){
-						getNeighbours(pOutImage,x,y,P);
-						if(isNeighbourSumSatisfied(P)){
-							if(isZeroOneSequenceSatisfied(P)){
-								if (!(P[1]&&P[3]&&P[5])){
-									if(!(P[3]&&P[5]&&P[7])){
-										deleter[offsetb]=1;
+			for(unsigned int x = 1; x < width - 1; ++x)
+			{
+				for(unsigned int y = 1; y < height - 1; ++y)
+				{
+					unsigned int offsetb = (x + y * width);
+					unsigned int offset = offsetb * bytesPerPixel;
+					if(pInData[offset])
+					{
+						getNeighbours(pOutImage, x, y, P);
+						if(isNeighbourSumSatisfied(P))
+						{
+							if(isZeroOneSequenceSatisfied(P))
+							{
+								if (!(P[1] && P[3] && P[5]))
+								{
+									if(!(P[3] && P[5] && P[7]))
+									{
+										pDeleter[offsetb] = 1;
 										no_deleted++;
 									}
 								}
@@ -75,32 +82,45 @@ namespace Pixel
 					}
 				}
 			}
-			for(unsigned int x=1;x<width-1;++x){
-				for(unsigned int y=1;y<height-1;++y){
-					unsigned int offsetb=(y*width+x);
-					unsigned int offset=offsetb*bytesPerPixel;
-					int val=pInData[offset]-deleter[offsetb];
-					if(val<0)pInData[offset]=0;
-					else pInData[offset]=val;
-					pInData[offset+1]=pInData[offset];
-					pInData[offset+2]=pInData[offset];
+			for(unsigned int x = 1; x < width - 1; ++x)
+			{
+				for(unsigned int y = 1; y < height - 1; ++y)
+				{
+					unsigned int offsetb = (x + y * width);
+					unsigned int offset = offsetb * bytesPerPixel;
+					int val = pInData[offset] - pDeleter[offsetb];
+					if(val < 0)
+					{
+						pInData[offset] = 0;
+					}
+					else
+					{
+						pInData[offset] = val;
+					}
 				}
 			}
 
-			memset(deleter, 0, sizeof(int) * size);
+			memset(pDeleter, 0, sizeof(int) * size);
 
 			//second sub iteration
-			for(unsigned int x=1;x<width-1;++x){
-				for(unsigned int y=1;y<height-1;++y){
-					unsigned int offsetb=(y*width+x);
-					unsigned int offset=offsetb*bytesPerPixel;
-					if(pInData[offset]){
-						getNeighbours(pOutImage, x,y,P);
-						if(isNeighbourSumSatisfied(P)){
-							if(isZeroOneSequenceSatisfied(P)){
-								if (!(P[1]&&P[3]&&P[7])){
-									if(!(P[1]&&P[5]&&P[7])){
-										deleter[offsetb]=1;
+			for(unsigned int x = 1; x < width - 1; ++x)
+			{
+				for(unsigned int y = 1; y < height - 1; ++y)
+				{
+					unsigned int offsetb = (x + y * width);
+					unsigned int offset = offsetb * bytesPerPixel;
+					if(pInData[offset])
+					{
+						getNeighbours(pOutImage, x, y, P);
+						if(isNeighbourSumSatisfied(P))
+						{
+							if(isZeroOneSequenceSatisfied(P))
+							{
+								if (!(P[1] && P[3] && P[7]))
+								{
+									if(!(P[1] && P[5] && P[7]))
+									{
+										pDeleter[offsetb] = 1;
 										no_deleted++;
 									}
 								}
@@ -109,28 +129,37 @@ namespace Pixel
 					}
 				}
 			}
-			for(unsigned int x=1;x<width-1;++x){
-				for(unsigned int y=1;y<height-1;++y){
-					unsigned int offsetb=(y*width+x);
-					unsigned int offset=offsetb*bytesPerPixel;
-					int val=pInData[offset]-deleter[offsetb];
-					if(val<0)pInData[offset]=0;
-					else pInData[offset]=val;
-					pInData[offset+1]=pInData[offset];
-					pInData[offset+2]=pInData[offset];
+			for(unsigned int x = 1; x < width - 1; ++x)
+			{
+				for(unsigned int y =1 ; y < height - 1; ++y)
+				{
+					unsigned int offsetb = (x + y * width);
+					unsigned int offset = offsetb * bytesPerPixel;
+					int val = pInData[offset] - pDeleter[offsetb];
+					if(val < 0)
+					{
+						pInData[offset] = 0;
+					}
+					else
+					{
+						pInData[offset] = val;
+					}
 				}
 			}	
 		}
 
-		for(unsigned int x=1;x<width-1;++x){
-			for(unsigned int y=1;y<height-1;++y){
-				unsigned int offset=(y*width+x)*bytesPerPixel;
-				pInData[offset]=pInData[offset]*255;
-				pInData[offset+1]=pInData[offset];
-				pInData[offset+2]=pInData[offset];
+		for(unsigned int x = 1; x < width - 1; ++x)
+		{
+			for(unsigned int y = 1; y < height - 1; ++y)
+			{
+				unsigned int offset = (x + y * width) * bytesPerPixel;
+				pInData[offset] = pInData[offset] * 255;
 			}
 		}
-		if(deleter) delete [] deleter;
+		if(pDeleter)
+		{
+			delete [] pDeleter;
+		}
 
 		return pOutImage;
 	}
