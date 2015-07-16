@@ -81,7 +81,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Addition.h" />
-    <ClInclude Include="AverageFiltering.h" />
+    <ClInclude Include="MeanFiltering.h" />
     <ClInclude Include="Binarization.h" />
     <ClInclude Include="CompileSettings.h" />
     <ClInclude Include="Cut.h" />
@@ -110,7 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Addition.cpp" />
-    <ClCompile Include="AverageFiltering.cpp" />
+    <ClCompile Include="MeanFiltering.cpp" />
     <ClCompile Include="Binarization.cpp" />
     <ClCompile Include="Cut.cpp" />
     <ClCompile Include="Difference.cpp" />

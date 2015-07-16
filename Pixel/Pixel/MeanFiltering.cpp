@@ -1,16 +1,16 @@
 
-#include <Pixel\AverageFiltering.h>
+#include <Pixel\MeanFiltering.h>
 #include <Pixel\Image.h>
 #include <Pixel\Utils.h>
 
 namespace Pixel
 {
-	AverageFiltering::AverageFiltering(unsigned int filterWindowSize)
+	MeanFiltering::MeanFiltering(unsigned int filterWindowSize)
 		: m_FilterWindowSize(filterWindowSize)
 	{
 	}
 
-	void AverageFiltering::setFilterWindowSize(unsigned int filterWindowSize)
+	void MeanFiltering::setFilterWindowSize(unsigned int filterWindowSize)
 	{
 		m_FilterWindowSize = filterWindowSize;
 		if(m_FilterWindowSize == 0)
@@ -19,7 +19,7 @@ namespace Pixel
 		}
 	}
 
-	Image* AverageFiltering::process(Image* pInImage)
+	Image* MeanFiltering::process(Image* pInImage)
 	{
 		//check if input is null
 		if(pInImage == NULL)

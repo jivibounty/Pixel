@@ -69,9 +69,6 @@
     <ClInclude Include="SaltAndPepperNoise.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AverageFiltering.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Erosion.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -94,6 +91,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LocalThresholding.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MeanFiltering.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -140,9 +140,6 @@
     <ClCompile Include="SaltAndPepperNoise.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AverageFiltering.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Dilation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -165,6 +162,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LocalThresholding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MeanFiltering.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
