@@ -13,11 +13,6 @@ namespace Pixel
 		{
 			return NULL;
 		}
-		//return null if image does not contain an rgb/rgba channel
-		if(pInImage->getBytesPerPixel() < 3)
-		{
-			return NULL;
-		}
 
 		//create output image
 		Image* pOutImage = new Image;
