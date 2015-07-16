@@ -167,28 +167,43 @@ namespace Pixel
 	bool Thinning::isZeroOneSequenceSatisfied(unsigned char p[9])
 	{
 		int A = 0;
-		if(!p[1]&&p[2]) A++;
-		if(!p[2]&&p[3]) A++;
-		if(!p[3]&&p[4]) A++;
-		if(!p[4]&&p[5]) A++;
-		if(!p[5]&&p[6]) A++;
-		if(!p[6]&&p[7]) A++;
-		if(!p[7]&&p[8]) A++;
-		if(!p[8]&&p[1]) A++;
-		if(A==1)return true;
-		else return false;
+		for(unsigned int n = 1; n < 8; ++n)
+		{
+			if(!p[n] && p[n + 1])
+			{
+				A++;
+			}
+		}
+		if(!p[8] && p[1])
+		{
+			A++;
+		}
+		if(A == 1)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 
 	int Thinning::getNeighbourSum(unsigned char p[9])
 	{
-		return p[1]+p[2]+p[3]+p[4]+p[5]+p[6]+p[7]+p[8];
+		return p[1] + p[2] + p[3] + p[4] + p[5] + p[6] + p[7] + p[8];
 	}
 
 	bool Thinning::isNeighbourSumSatisfied(unsigned char p[9])
 	{
-		int B= p[1]+p[2]+p[3]+p[4]+p[5]+p[6]+p[7]+p[8];
-		if(B>=2&&B<=6) return true;
-		else return false;
+		int B = p[1] + p[2] + p[3] + p[4] + p[5] + p[6] + p[7] + p[8];
+		if(B >= 2 && B <= 6)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 
 	void Thinning::getNeighbours(Image* pImage, int x, int y, unsigned char p[9])
@@ -202,15 +217,15 @@ namespace Pixel
 		unsigned int width = pImage->getWidth();
 		unsigned int bytesPerPixel = pImage->getBytesPerPixel();
 
-		p[0]=pData[(y*width+x)*bytesPerPixel];
-		p[1]=pData[((y-1)*width+x)*bytesPerPixel];
-		p[2]=pData[((y-1)*width+(x+1))*bytesPerPixel];
-		p[3]=pData[(y*width+(x+1))*bytesPerPixel];
-		p[4]=pData[((y+1)*width+(x+1))*bytesPerPixel];
-		p[5]=pData[((y+1)*width+x)*bytesPerPixel];
-		p[6]=pData[((y+1)*width+(x-1))*bytesPerPixel];
-		p[7]=pData[(y*width+(x-1))*bytesPerPixel];
-		p[8]=pData[((y-1)*width+(x-1))*bytesPerPixel];
+		p[0] = pData[(y * width + x) * bytesPerPixel];
+		p[1] = pData[((y - 1) * width + x) * bytesPerPixel];
+		p[2] = pData[((y - 1) * width + (x + 1)) * bytesPerPixel];
+		p[3] = pData[(y * width + (x + 1)) * bytesPerPixel];
+		p[4] = pData[((y + 1) * width + (x + 1)) * bytesPerPixel];
+		p[5] = pData[((y + 1) * width + x) * bytesPerPixel];
+		p[6] = pData[((y + 1) * width + (x - 1)) * bytesPerPixel];
+		p[7] = pData[(y * width + (x - 1)) * bytesPerPixel];
+		p[8] = pData[((y - 1) * width + (x - 1)) * bytesPerPixel];
 	}
 
 }
