@@ -101,7 +101,6 @@
     <ClInclude Include="Pruning.h" />
     <ClInclude Include="ReferenceCounter.h" />
     <ClInclude Include="Rotation.h" />
-    <ClInclude Include="SaltAndPepperNoise.h" />
     <ClInclude Include="Segmentation.h" />
     <ClInclude Include="SobelEdgeDetection.h" />
     <ClInclude Include="Subtraction.h" />
@@ -127,7 +126,6 @@
     <ClCompile Include="Paste.cpp" />
     <ClCompile Include="Pruning.cpp" />
     <ClCompile Include="Rotation.cpp" />
-    <ClCompile Include="SaltAndPepperNoise.cpp" />
     <ClCompile Include="Segmentation.cpp" />
     <ClCompile Include="SobelEdgeDetection.cpp" />
     <ClCompile Include="Subtraction.cpp" />

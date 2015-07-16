@@ -66,9 +66,6 @@
     <ClInclude Include="MedianFiltering.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SaltAndPepperNoise.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Erosion.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -135,9 +132,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MedianFiltering.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SaltAndPepperNoise.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Dilation.cpp">
