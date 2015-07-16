@@ -10,3 +10,9 @@ Pixel/Pixel/Debug/cl.command.1.tlog
 *.tlog
 *.tlog
 Pixel/Pixel/Debug/cl.command.1.tlog
+*.pdb
+*.obj
+*.cache
+*.idb
+*.exp
+*.ilk
