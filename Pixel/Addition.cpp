@@ -35,9 +35,9 @@ namespace Pixel
 		//compute number of pixels
 		unsigned int width1 = m_pBaseImage->getWidth();
 		unsigned int height1 = m_pBaseImage->getHeight();
+		unsigned int bytesPerPixel1 = m_pBaseImage->getBytesPerPixel();
 		unsigned int width2 = pInImage->getWidth();
 		unsigned int height2 = pInImage->getHeight();
-		unsigned int bytesPerPixel1 = pInImage->getBytesPerPixel();
 		unsigned int bytesPerPixel2 = pInImage->getBytesPerPixel();
 		
 		unsigned int width = width1 > width2 ? width1 : width2;
